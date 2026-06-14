@@ -2,6 +2,10 @@ const line1 = document.querySelector(".line1");
 const line2 = document.querySelector(".line2"); 
 const line3 = document.querySelector(".line3");
 
+const animateArrow = document.querySelector(".nav-arrow")
+const animateBtn = document.querySelector(".nav-btn")
+const baseWidth = animateBtn.offsetWidth;
+
 const element = {
     title: 'Write a attractive hero title for the following website <span> https://zeltalabs.com/ </span>',
     img: './resources/icons/mdi_arrow-up.svg'
@@ -41,9 +45,7 @@ const createElement = (elementwrapper) => {
         <h2>${element.title}</h2>
         <img src="${element.img}" alt="arrow up" />
     `;
-
     elementwrapper.appendChild(carouselElement);
-
 }
 
 const fillElement = (wrapper, count, duplicate = 2) => {
@@ -81,3 +83,14 @@ fillElement(line1, 3);
 fillElement(line2, 3);
 fillElement(line3, 3);
 
+
+
+animateBtn.addEventListener('mouseenter', () => {
+    animateArrow.classList.add('show');
+    animateBtn.style.width = (baseWidth + 10) + "px";
+});
+
+animateBtn.addEventListener('mouseleave', () => {
+    animateArrow.classList.remove('show');
+    animateBtn.style.width = baseWidth + "px";
+});

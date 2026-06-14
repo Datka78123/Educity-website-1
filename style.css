@@ -79,6 +79,20 @@ h1{
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-size: 16px;
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+.nav-arrow{
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease, transform 0.3s ease;
+}
+
+.nav-arrow.show {
+    position: static;
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .hero{
@@ -466,4 +480,144 @@ h1{
     line-height: 28.8px;
     letter-spacing: -0.8px;
     color: #828282;
+}
+
+.sign-up-container{
+    background-image: url(./resources/images/Frame\ 45.png);
+    max-width: 1308px;
+    min-height: 474px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 19px;
+    padding: 10px;
+}
+
+.signup-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 58px;
+}
+
+.signup-text h2{
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 74px;
+    letter-spacing: -1%;
+    text-align: center;
+}
+
+.signup-text button{
+    border-radius: 55px;
+    padding: 14px 34px;
+    font-family: 'Poppins' , sans-serif;
+}
+
+footer{
+    background-color:#0E0E0E;
+    min-height: 678px;
+    padding: 48px 64px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-subtitle{
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #828282;
+}
+
+.footer-a{
+    background: transparent;
+    width: 528px;
+    height: 582px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-height: 192px;
+}
+
+.list-container{
+    display: flex;
+    gap: 96px;
+    max-width: 287px;
+}
+
+footer ul{
+    list-style: none; 
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%;
+    
+}
+
+.copy ul{
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 130%;
+    color: #828282;
+}
+
+.footer-b{
+    width: 752px;
+    height: 579px;
+    display: flex;
+    flex-direction: column;
+    gap: 192px;
+}
+
+.socialcontent-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;   
+}
+
+.contact-details{
+    display: flex;
+    gap: 96px;
+}
+
+.socialmedia-wrapper{
+    display: flex;
+    gap: 96px;
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.icons-wrapper{
+    display: flex;
+    gap: 10px;
+}
+
+.copy-1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.last-div{
+    display: flex;
+    gap: 32px;
 }
