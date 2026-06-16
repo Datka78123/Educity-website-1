@@ -2,9 +2,10 @@ const line1 = document.querySelector(".line1");
 const line2 = document.querySelector(".line2"); 
 const line3 = document.querySelector(".line3");
 
-const animateArrow = document.querySelector(".nav-arrow")
-const animateBtn = document.querySelector(".nav-btn")
-const baseWidth = animateBtn.offsetWidth;
+const animateArrow = document.querySelectorAll(".arrow")
+const animateBtn = document.querySelectorAll(".btn-arrow")
+const animateBtns = document.querySelectorAll(".btn-arrow");
+
 
 const element = {
     title: 'Write a attractive hero title for the following website <span> https://zeltalabs.com/ </span>',
@@ -84,13 +85,18 @@ fillElement(line2, 3);
 fillElement(line3, 3);
 
 
+animateBtns.forEach(btn => {
+    const arrow = btn.querySelector(".arrow");   
+    
+    if (!arrow) return;
 
-animateBtn.addEventListener('mouseenter', () => {
-    animateArrow.classList.add('show');
-    animateBtn.style.width = (baseWidth + 10) + "px";
-});
+    btn.addEventListener('mouseenter', () => {
+        arrow.style.transform = "translateX(10px)";
+        arrow.style.opacity = "1";
+    });
 
-animateBtn.addEventListener('mouseleave', () => {
-    animateArrow.classList.remove('show');
-    animateBtn.style.width = baseWidth + "px";
+    btn.addEventListener('mouseleave', () => {
+        arrow.style.transform = "translateX(55px)";
+        arrow.style.opacity = "0";
+    });
 });
